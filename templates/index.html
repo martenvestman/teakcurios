@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<body>
+<head>
+	<title>Teakcurios</title>
+	<link rel="stylesheet" href="static/main.css"/>
+</head>
+
+<div class="topnav">
+  <a href="/">Home</a>
+  <a href="/blocket">Blocket</a>
+  <a href="/bukowskis">Bukowskis</a>
+  <a href="/lauritz">Lauritz</a>
+  <a href="/antikkompaniet">Antikkompaniet</a>
+  <a href="/linneolump">Linne & Lump</a>
+  <div class="search-container">
+    <form action="/search" method="post">
+      <input type="text" placeholder="Search..." name="search">
+    </form>
+  </div>
+</div>
+
+<div class="items">
+	{% for item in db %}
+		<a href="{{ item.url }}">
+			<img src="{{ item.img }}" class="image">
+		</a>
+	{% endfor %}
+	</div>
+</div>
+</body>
+</html>
